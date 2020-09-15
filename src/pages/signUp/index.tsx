@@ -22,7 +22,7 @@ interface SignUpFormData {
 const SignUp = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = useCallback(async (data: any) => {
+  const handleSubmit = useCallback(async (data: SignUpFormData) => {
     try {
       const schema = Yup.object().shape({
         name: Yup.string().required('Nome obrigatório'),
