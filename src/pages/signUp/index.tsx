@@ -69,10 +69,10 @@ const SignUp = () => {
             <Button type="submit">Cadastrar</Button>
           </Form>
 
-          <a href="/">
+          <Link to="/">
             <FiArrowLeft />
             Voltar para logon
-          </a>
+          </Link>
         </AnimationContainer>
       </Content>
     </Container>

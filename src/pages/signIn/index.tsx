@@ -89,10 +89,10 @@ const SignIn: React.FC = () => {
             <a href="forgo">Esqueci minha senha</a>
           </Form>
 
-          <a href="/signup">
+          <Link to="/signup">
             <FiLogIn />
             Criar conta
-          </a>
+          </Link>
         </AnimationContainer>
       </Content>
       <Background />
