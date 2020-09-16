@@ -10,7 +10,7 @@ interface ToastContainerProps {
   messages: ToastMessage[];
 }
 
-const ToastContainer: React.FC<ToastContainerProps> = ({ messages }) => {
+const ToastContainer = ({ messages }: ToastContainerProps) => {
   const messagesWithTransitions = useTransition(
     messages,
     (message) => message.id,

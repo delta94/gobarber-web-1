@@ -18,9 +18,13 @@ interface AuthContextData {
   signOut(): void;
 }
 
+interface IAuthProvider {
+  children: React.ReactNode;
+}
+
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-const AuthProvider: React.FC = ({ children }) => {
+const AuthProvider = ({ children }: IAuthProvider) => {
   const [data, setData] = useState<AuthState>(() => {
     const token = localStorage.getItem('@GoBarber:token');
     const user = localStorage.getItem('@GoBarber:user');
