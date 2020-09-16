@@ -1,15 +1,16 @@
 import React from 'react';
-import SignIn from './pages/signIn';
-import SignUp from './pages/signUp';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import { AuthProvider } from './hooks/auth';
 
 import GlobalStyle from './styles/global';
 
 const App = () => (
-  <>
-    <SignIn />
-    {/* <SignUp /> */}
-    <GlobalStyle />
-  </>
+    <AuthProvider>
+      <SignIn />
+      {/* <SignUp /> */}
+      <GlobalStyle />
+    </AuthProvider>
 );
 
 export default App;
